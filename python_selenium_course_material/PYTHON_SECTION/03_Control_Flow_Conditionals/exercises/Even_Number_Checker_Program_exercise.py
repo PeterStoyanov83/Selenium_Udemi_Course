@@ -9,3 +9,11 @@ Output: 2 is even
 Input: 3
 Output: 3 is not even
 """
+
+number = float(input("give your number:"))
+if number == 0:
+    raise ValueError("zero doesn't play!!!")
+if number % 2 == 0:
+    print(f"{number} is even")
+else:
+    print(f"{number} is not even")
