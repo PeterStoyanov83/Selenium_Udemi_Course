@@ -31,3 +31,21 @@ e.g. Input: weight(kg) - 70
             height(m) - 1.5
      Output: Your BMI is 31.1. You are Obese.
 """
+
+user_weight = float(input("Input your weight in kg:"))
+
+user_height = float(input("Input your height in m:"))
+
+body_mass_index = user_weight / (user_height ** 2)
+
+if body_mass_index <= 18.5:
+    print(f'Your BMI is {body_mass_index:2f}. You are Underweight!')
+
+elif body_mass_index <= 25:
+    print(f'Your BMI is {body_mass_index:2f}. You are Normal!')
+
+elif body_mass_index <= 27:
+    print(f'Your BMI is {body_mass_index:2f}. You are Overweight!')
+
+else:
+    print(f'Your BMI is {body_mass_index:2f}. You are Obese!')
