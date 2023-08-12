@@ -1,5 +1,5 @@
-
 import pdb
+
 
 class Animal:
 
@@ -23,13 +23,14 @@ class Animal:
         self.eat()
         self.breath()
 
+
 my_animal1 = Animal('blue', 'meat')
 print(f"color of animal 1: {my_animal1.color}")
-# my_animal1.move()
-# my_animal1.eat()
+my_animal1.move()
+my_animal1.eat()
 my_animal1.main()
 
-# my_animal2 = Animal('red', 'veg')
-# my_animal2.eat()
+my_animal2 = Animal('red', 'veg')
+my_animal2.eat()
 
-# pdb.set_trace()
+pdb.set_trace()

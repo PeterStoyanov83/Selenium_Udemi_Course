@@ -19,5 +19,5 @@ print(countries)
 my_c = countries.pop()
 print(countries)
 print(my_c)
-
+print(countries)
 abc = {'ad': 123}

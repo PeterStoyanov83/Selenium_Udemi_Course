@@ -1,7 +1,6 @@
-
-
 # from src.util.dbHelper import DBHelper  # example,  we would import it
 import random
+
 
 class DatabaseHelper:
 
@@ -14,12 +13,15 @@ class DatabaseHelper:
     def read_from_db(self):
         print('read...')
 
+
 class AuthHelper:
     pass
+
+
 # Example of inheritance
 class Account(DatabaseHelper):
 
-    def __init__(self, user_id, database_address, username, password, currency='USD',):
+    def __init__(self, user_id, database_address, username, password, currency='USD', ):
         super().__init__(database_address, username, password)
         self.user_id = user_id
         self.currency = currency
@@ -46,10 +48,11 @@ class Account(DatabaseHelper):
         self.read_from_db()
         print("Saving to db.")
 
+
 # Example of composition
 class Account(object):
 
-    def __init__(self, user_id, database_address, username, password, currency='USD',):
+    def __init__(self, user_id, database_address, username, password, currency='USD', ):
         self.user_id = user_id
         self.currency = currency
         self.current_balance = self.__read_balance_from_database()
@@ -77,5 +80,6 @@ class Account(object):
         print("Saving to db.")
 
         self.db_helper.write_to_db()
+
 
 my_acct = Account(...)

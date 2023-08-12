@@ -1,9 +1,7 @@
-
-
 import random
 
-class Account(object):
 
+class Account(object):
     minimum_investment_amount = 50
 
     def __init__(self, user_id, currency='USD'):
