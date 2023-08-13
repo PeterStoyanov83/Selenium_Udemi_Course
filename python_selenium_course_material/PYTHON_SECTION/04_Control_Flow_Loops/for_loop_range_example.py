@@ -7,7 +7,7 @@
 #     print(i)
 #
 my_list = []
-for i in range(10):
+for i in range(10+1):
     my_list.append('abc')
 print(my_list)
 print(len(my_list))

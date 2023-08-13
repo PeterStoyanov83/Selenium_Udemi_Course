@@ -9,7 +9,7 @@ Scenario:
 
 
 Exercise 1:
-    - Iterate the products list and print the name of all products that have price greater than 25.
+    -
 
 Exercise 2:
     - Print the name and price of products that are on sale.
@@ -24,9 +24,30 @@ Exercise 3:
 products = [
     {'id': 1, 'name': 't-shirt', 'price': 12.99, 'created_date': '2022-01-01', 'is_on_sale': False, 'sale_price': None},
     {'id': 2, 'name': 'shoes', 'price': 22.45, 'created_date': '2022-01-01', 'is_on_sale': True, 'sale_price': None},
-    {'id': 3, 'name': 'dress-shirt', 'price': 43.00, 'created_date': '2022-01-01', 'is_on_sale': False, 'sale_price': None},
+    {'id': 3, 'name': 'dress-shirt', 'price': 43.00, 'created_date': '2022-01-01', 'is_on_sale': False,
+     'sale_price': None},
     {'id': 4, 'name': 'socks', 'price': 14.99, 'created_date': '2022-01-01', 'is_on_sale': True, 'sale_price': 7.99},
     {'id': 5, 'name': 'trousers', 'price': 32.50, 'created_date': '2022-01-01', 'is_on_sale': True, 'sale_price': None},
     {'id': 6, 'name': 'jacket', 'price': 150.00, 'created_date': '2022-01-01', 'is_on_sale': False, 'sale_price': None},
 ]
+
+print("Products on sale:")
+print("{:<15} {:<10}".format('Product Name', 'Price'))  # This will print headers for our columns
+print("-" * 25)  # Drawing a line to separate headers from the data
+
+for product in products:
+    if product['is_on_sale']:
+        print("{:<15} ${:<10.2f}".format(product['name'], product['price']))
+print("-" * 25 + "\n")
+
+products_on_sale_w_no_price = []
+
+
+for product in products:
+    if product['is_on_sale'] and product['sale_price'] == None:
+        products_on_sale_w_no_price.append(product['name'])
+
+print(f'Products we have on sale but have no price: {products_on_sale_w_no_price}')
+
+
 
